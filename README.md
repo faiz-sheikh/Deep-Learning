@@ -27,6 +27,18 @@ Coursework exercises exploring deep learning and related machine-learning method
 
 More detailed saved-output evidence is recorded in [`results.md`](results.md).
 
+## Model files
+
+The following trained model files are hosted on Hugging Face rather than stored in this repository:
+
+| Model | Training | Licence |
+| --- | --- | --- |
+| [Beans VGG16](https://huggingface.co/faiz4320/beans-vgg16) | Transfer learning: ImageNet weights ported by Keras Applications, base frozen, new head trained, no fine-tuning. | `cc-by-4.0` |
+| [Beans ResNet50](https://huggingface.co/faiz4320/beans-resnet50) | Transfer learning: ImageNet weights ported by Keras Applications, base frozen, new head trained, no fine-tuning. | `mit` |
+| [CIFAR-10 ResNet50 from scratch](https://huggingface.co/faiz4320/cifar10-resnet50-scratch) | Trained from scratch, custom CIFAR-style ResNet50-v1, random init. | `mit` |
+
+The other saved checkpoints—`best_vgg16_cifar10.keras`, `best_of_vgg16_cifar10.keras`, and `best_resnet50_cifar10.keras`—are not published because their results could not be tied to those specific files.
+
 ## Datasets
 
 | Dataset | Availability and source | Licence |
@@ -44,13 +56,12 @@ More detailed saved-output evidence is recorded in [`results.md`](results.md).
 - `K_Fold_Cross_Validation.ipynb` standardises the full dataset before cross-validation, leaking information between folds.
 - `DL_LAB_2.ipynb` has no test-set evaluation.
 - `DL_LAB_3.ipynb` does not display its test accuracy in the saved output.
-- The saved CIFAR-10 VGG16 models could not be tied to a specific result.
 - Some notebooks retain harmless errors in saved output: a `NameError` in `VGG16_SCR.ipynb` and a `FileNotFoundError` in the Beans inference cell.
-- Results were not re-run offline, and trained model files are not included in the repository.
+- Results were not re-run offline.
 
 ## Licences and credits
 
-The VGG16 ImageNet weights are licensed under CC BY 4.0, and the ResNet50 ImageNet weights are licensed under MIT. Both weight sets were ported by Keras Applications. Trained model files are not included in this repository.
+The VGG16 ImageNet weights are licensed under CC BY 4.0, and the ResNet50 ImageNet weights are licensed under MIT. Both weight sets were ported by Keras Applications.
 
 ## How this was built
 
