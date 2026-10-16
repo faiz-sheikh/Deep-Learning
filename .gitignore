@@ -1,3 +1,4 @@
 pretrained/_incoming/
+_hf_staging/
 *.keras
 *.h5
